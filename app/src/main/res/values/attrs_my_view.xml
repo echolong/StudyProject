@@ -1,0 +1,15 @@
+<resources>
+
+    <declare-styleable name="FirstView">
+        <attr name="textColor" format="color" />
+        <attr name="textSize" format="dimension" />
+        <attr name="textString" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="ScrollCustomView">
+        <attr name="firstColor" format="color" />
+        <attr name="secondColor" format="color" />
+        <attr name="widthValue" format="dimension" />
+        <attr name="speed" format="float" />
+    </declare-styleable>
+</resources>
