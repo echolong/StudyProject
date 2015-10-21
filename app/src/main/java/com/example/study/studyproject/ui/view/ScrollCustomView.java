@@ -1,4 +1,4 @@
-package com.example.study.studyproject.view;
+package com.example.study.studyproject.ui.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;

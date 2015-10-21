@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <com.example.study.studyproject.view.MyView
+        <com.example.study.studyproject.ui.view.MyView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingBottom="5dp"
@@ -22,7 +22,7 @@
             app:textSize="18sp"
             app:textString="我就是这样的人" />
 
-        <com.example.study.studyproject.view.ScrollCustomView
+        <com.example.study.studyproject.ui.view.ScrollCustomView
             android:layout_width="100dp"
             android:layout_height="100dp"
             app:firstColor="#ff0000"

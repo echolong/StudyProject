@@ -1,4 +1,4 @@
-package com.example.study.studyproject.view;
+package com.example.study.studyproject.ui.view;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
