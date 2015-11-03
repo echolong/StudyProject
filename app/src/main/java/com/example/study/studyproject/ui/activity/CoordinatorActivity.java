@@ -3,13 +3,17 @@ package com.example.study.studyproject.ui.activity;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.study.studyproject.R;
 import com.example.study.studyproject.ui.view.DividerItemDecoration;
@@ -19,15 +23,37 @@ import java.util.ArrayList;
 public class CoordinatorActivity extends Activity {
 
     private RecyclerView dataList;
+    private CollapsingToolbarLayout collapsingToolbar;
+    private Toolbar toolbar;
+    private FloatingActionButton fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_coordinator);
 
+        fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Snackbar.make(v, "测试数据", Snackbar.LENGTH_LONG).setAction("bb", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(CoordinatorActivity.this, "aa", Toast.LENGTH_SHORT).show();
+                    }
+                }).show();
+
+            }
+        });
+
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setNavigationIcon(R.mipmap.ic_launcher);
         //设置工具栏标题
-        CollapsingToolbarLayout collapsingToolbar = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
+        collapsingToolbar = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
+        //设置标题
         collapsingToolbar.setTitle("cheeseName");
+        //设置缩小后的背景颜色
+        collapsingToolbar.setContentScrimResource(R.color.data_bg);
 
         dataList = (RecyclerView) findViewById(R.id.listView);
         TestRecycleAdapter adapter = new TestRecycleAdapter(getStringDate(20));

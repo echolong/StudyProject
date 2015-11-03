@@ -14,5 +14,9 @@
     <string name="title_activity_glide_image">GlideImageActivity</string>
 
     <string name="text_link"><![CDATA[ Visit <a href=\"http://blog.csdn.net/vector_yi\">Vector_Yi\'s Blog</a> ]]></string>
+    <string name="title_activity_drawer_layout">DrawerLayoutActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 
 </resources>
