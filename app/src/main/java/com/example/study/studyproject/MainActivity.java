@@ -8,14 +8,21 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.study.studyproject.ui.ActivityLifeActivity;
 import com.example.study.studyproject.ui.Coordinator2Activity;
 import com.example.study.studyproject.ui.CustomCoordinatorActivity;
 import com.example.study.studyproject.ui.ImmerseActivity;
 import com.example.study.studyproject.ui.NewsDesignActivity;
+import com.example.study.studyproject.ui.PersonInfoActivity;
 
 public class MainActivity extends Activity {
 
-    private String[] titleActivity = {"CustomCoordinatorActivity", "Coordinator2Activity", "NewsDesignActivity", "ImmerseActivity"};
+    private String[] titleActivity = {"CustomCoordinatorActivity",
+            "Coordinator2Activity",
+            "NewsDesignActivity",
+            "ImmerseActivity",
+            "生命周期",
+            "MVP模式"};
     private ListView activityList;
 
     @Override
@@ -43,6 +50,12 @@ public class MainActivity extends Activity {
                         break;
                     case 3:
                         intent = new Intent(MainActivity.this, ImmerseActivity.class);
+                        break;
+                    case 4:
+                        intent = new Intent(MainActivity.this, ActivityLifeActivity.class);
+                        break;
+                    case 5:
+                        intent = new Intent(MainActivity.this, PersonInfoActivity.class);
                         break;
                 }
                 if (intent != null) {

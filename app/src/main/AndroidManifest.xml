@@ -3,6 +3,7 @@
     package="com.example.study.studyproject" >
 
     <application
+        android:name=".StudyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -37,6 +38,12 @@
         <activity
             android:name=".ui.GlideImageActivity"
             android:label="@string/title_activity_glide_image" >
+        </activity>
+        <activity android:name=".ui.ActivityLifeActivity" >
+        </activity>
+        <activity android:name=".ui.ActivityLife2Activity" >
+        </activity>
+        <activity android:name=".ui.PersonInfoActivity" >
         </activity>
     </application>
 
